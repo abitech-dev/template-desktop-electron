@@ -4,6 +4,8 @@
 [![Electron](https://img.shields.io/badge/framework-Electron-blue)](https://www.electronjs.org/)
 [![Maintenance](https://img.shields.io/badge/maintained-yes-brightgreen.svg)](https://github.com/[usuario]/[proyecto])
 
+> **🗂️ Navegación:** **[Ir a la GUÍA TECNICA](./CONFIG.md)**
+
 Contenedor nativo de escritorio para la plataforma **[Nombre del Proyecto]**. Este software actúa como un *Dedicated Web Wrapper* optimizado, proporcionando una experiencia de usuario aislada, segura y de alto rendimiento fuera del navegador convencional.
 
 ---
@@ -13,7 +15,7 @@ Contenedor nativo de escritorio para la plataforma **[Nombre del Proyecto]**. Es
 * **Instancia Dedicada:** Ejecución independiente del navegador del sistema.
 * **Seguridad Reforzada:** Aislamiento de contexto y restricción de integración de Node en el renderizador.
 * **Optimización de Ventana:** Gestión inteligente de estados (maximizado, redimensionamiento y persistencia).
-* **Branding Nativo:** Integración de íconos y presencia en la barra de tareas del SO.
+* **Branding Nativo:** Integración de íconos en tiempo de ejecución y en el instalador del sistema operativo.
 
 ---
 
@@ -33,7 +35,7 @@ Siga estos pasos para levantar el entorno de pruebas local:
 
 1. **Clonación y Dependencias:**
    ```bash
-   git clone [https://github.com/](https://github.com/)[usuario]/[proyecto]-desktop-electron.git
+   git clone https://github.com/[usuario]/[proyecto]-desktop-electron.git
    cd [proyecto]-desktop-electron
    npm install
    ```
@@ -47,16 +49,16 @@ Siga estos pasos para levantar el entorno de pruebas local:
 
 ---
 
-## 📦 Despliegue y Distribución (Build)
+## 📦 Despliegue y Distribución (Make)
 
-El empaquetado genera binarios optimizados para el usuario final. Para compilar la solución:
+El empaquetado utiliza **Electron Forge** para generar binarios instalables (.exe, .dmg, .deb) y versiones ejecutables portátiles. Para iniciar la compilación:
 
 ```bash
-npm run build
+npm run make
 ```
 
-* **Salida:** Los artefactos generados (.exe, .dmg, .AppImage) se ubicarán en el directorio `/dist`.
-* **Plataformas:** Configurado por defecto para detectar el sistema operativo actual del host.
+* **Directorio de Salida:** Los artefactos generados se ubicarán en el directorio `/out/`.
+* **Regla de Plataforma:** Por defecto, Forge compila solo para el sistema operativo desde el cual se ejecuta el comando.
 
 ---
 
@@ -66,15 +68,15 @@ La integridad de la aplicación es prioridad. Este contenedor implementa las sig
 
 * `contextIsolation: true`: Asegura que tanto los scripts de Electron como la lógica de la página web corran en contextos separados.
 * `nodeIntegration: false`: Evita que scripts maliciosos de terceros tengan acceso a las APIs del sistema operativo.
-* `spellcheck: true`: Validación nativa de gramática en campos de entrada.
+* `spellcheck: true`: Validación nativa de ortografía y gramática en campos de entrada.
 
 ---
 
 ## 👨‍💻 Autoría
 
-* **Desarrollador:** [Tu Nombre / Empresa]
-* **Soporte:** [correo@dominio.com]
-* **Website:** [https://tu-sitio.com]
+* **Desarrollador:** Abimael Fernandez / ABItech PERU
+* **Soporte:** [peruabitech@gmail.com]
+* **Website:** [https://abitech.com.pe]
 
 ---
-© 2026 **[Nombre de tu Empresa]**. Todos los derechos reservados.
+© 2026 **ABItech PERU**. Todos los derechos reservados.

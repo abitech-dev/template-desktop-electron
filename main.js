@@ -19,7 +19,7 @@ function createWindow() {
         show: false,    // No mostrar hasta que esté lista (evita el flash blanco)
         autoHideMenuBar: true, 
         fullscreen: IS_FULLSCREEN, 
-        // icon: path.join(__dirname, 'public', 'icon.ico'), 
+        icon: path.join(__dirname, 'public', 'icon.ico'), 
         webPreferences: {
             nodeIntegration: false,
             contextIsolation: true,
