@@ -1,0 +1,12 @@
+{
+  "name": "template-desktop-electron",
+  "version": "1.0.0",
+  "description": "Plantilla base de Electron puro para Web Wrappers.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^30.0.0"
+  }
+}
