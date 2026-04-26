@@ -1,6 +1,11 @@
 const { app, BrowserWindow, screen } = require('electron');
 const path = require('path');
 
+// Crear accesos directos
+if (require('electron-squirrel-startup')) {
+    app.quit();
+}
+
 // ==========================================
 // CONFIGURACIÓN PRINCIPAL
 // ==========================================
@@ -17,9 +22,9 @@ function createWindow() {
         minWidth: 1000,
         minHeight: 700,
         show: false,    // No mostrar hasta que esté lista (evita el flash blanco)
-        autoHideMenuBar: true, 
-        fullscreen: IS_FULLSCREEN, 
-        icon: path.join(__dirname, 'public', 'icon.ico'), 
+        autoHideMenuBar: true,
+        fullscreen: IS_FULLSCREEN,
+        icon: path.join(__dirname, 'public', 'icon.ico'),
         webPreferences: {
             nodeIntegration: false,
             contextIsolation: true,

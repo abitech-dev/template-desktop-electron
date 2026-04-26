@@ -1,7 +1,8 @@
 {
   "name": "template-desktop-electron",
+  "productName": "Mi App",
   "version": "1.0.0",
-  "description": "Plantilla base de Electron puro para Web Wrappers.",
+  "description": "Aplicación de escritorio Mi App.",
   "main": "main.js",
   "scripts": {
     "start": "electron-forge start",
